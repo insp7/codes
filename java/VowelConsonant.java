@@ -1,5 +1,7 @@
 /* Program to count vowels and consonants */
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 class VowelConsonant {
 
@@ -26,7 +28,7 @@ class VowelConsonant {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException, Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int vowels, consonants;
 		vowels = consonants = 0;
