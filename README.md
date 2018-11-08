@@ -7,4 +7,4 @@
 * **java/Palindrome.java** : Program to check if a given string is a palindrome.
 * **java/PascalTriangle.java** : Program to display Pascal Triangle specified by the number of rows.
 * **java/PrimeNumber.java** : Program to print the series of prime numbers.
-* *Added solution to a hackerrank problem. To view the question, click* [hackerrank-question](https://www.hackerrank.com/challenges/electronics-shop/problem)
+* *Added solution to a hackerrank problem. To view the question, click* [hackerrank-question-electronics-shop](https://www.hackerrank.com/challenges/electronics-shop/problem)
