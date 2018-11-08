@@ -12,7 +12,7 @@ class VowelConsonant {
 	 * @return {boolean} returns true if the character 'x' is a vowel, else 'false'.
 	 */
 	private static boolean isVowel(char x) {
-		switch(x){
+		switch(x) {
 			case 'a':
 			case 'A':
 			case 'e':
