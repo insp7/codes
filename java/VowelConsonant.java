@@ -29,12 +29,14 @@ class VowelConsonant {
 	}
 
 	public static void main(String[] args) throws IOException, Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String s;
 		int vowels, consonants;
 		vowels = consonants = 0;
 
 		System.out.println("Enter the Data");
-		String s = br.readLine();
+		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+			s = br.readLine();
+		}
 
 		for(int i = 0; i <= s.length()-1; i++) {
 			if(isVowel(s.charAt(i)))

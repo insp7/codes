@@ -1,0 +1,114 @@
+System Configuration: 
+Processor: Intel i3-3220 @ 3.30GHz (3MB Cache, 2 Cores, 4 Threads, Bus-speed: 5 GT/s DMI, Processor Graphics: Intel HD Graphics 2500, Graphics Base Frequency: 1.05GHz)
+RAM: 4GB ddr3 memory
+Video-Card(GPU): AMD Radeon Sapphire 6670 HD 1GB-ddr3 
+OS: Windows 7 Ultimate 64-bit
+
+TESTS: 
+
+The input numbers given to prime-checker function were all odd numbers starting from 3(i.e. 3, 5, 7, 9, 11, ... ,181935769); 
+Because all even numbers are composite, hence avoid that computation. 
+
+1) Using traditional approach: 
+CODE SNIPPET OF SIMPLE PRIME-CHECKER FUNCTION: 
+/**
+ * Function to check if the given number is prime.
+ * 
+ * @param  number Specifies the passed number
+ * @return        returns true if the given number is prime, else returns false.
+ */
+private static boolean isPrime(long number) {
+	if(number == 2) return true; // Smallest prime number.
+	if(number % 2 == 0) return false; // check if its an even number; if true, return false; since all even numbers are composite.
+
+	long iterations = 0;
+	for(long i = 3L; i <= number; i += 2) {
+		iterations++;
+		if(number % i == 0) {
+			System.out.println("iterations = "+iterations);
+			return false;
+		}
+	}
+	System.out.println("Iterations = "+iterations);
+	return true; 
+}
+
+--  Time required to calculate Prime numbers between 1 to 1 Million = 3:13.64 mins(equivalent to 193.64 seconds).
+
+THE ABOVE TIME CAN BE FURTHER IMPROVED, BY DOING THE FOLLOWING CHANGES IN THE 'for' LOOP:
+	for(long i = 3L; i <= number/2; i += 2) { // notice that now 'i' will do only 'number/4' iterations (whereas, previously it was performing 'number/2' iterations)
+		.
+		.
+		.
+	}
+
+--  Time required to calculate Prime numbers between 1 to 1 Million by using the above for-loop = 1:37.94 mins(equivalent to 97.94 seconds).
+	This works better due to the addition of 'number/2', since , now 'i' has to iterate only till 'number/2'; 
+	AND also, in every iteration 'i' is getting incremented by 2 i.e. i =+ 2, so the number of iterations is reduced to 'number/4' iterations.
+
+	However, there is a significantly better approach for checking primality of a number, namely 'Trial Division' algorithm/approach.
+
+2) Using Trial Division Algorithm: 
+CODE SNIPPET OF TRIAL_DIVISION PRIME-CHECKER FUNCTION: 
+/**
+ * Function to check if the given number is prime using Trial Division algorithm;
+ * If any prime number whose square does not exceed 'number' divides it without a remainder, then 'number' is not prime.
+ * 
+ * @param  number Specifies the passed number
+ * @return        returns true if the given number is prime, else returns false.
+ */
+private static boolean isPrimeUsingTrialDivision(long number) {
+	if(number == 2) return true; // Smallest prime number.
+	if(number % 2 == 0) return false; // check if its an even number; if true, return false; since all even numbers are composite.
+
+	long iterations = 0L;
+	for(long i = 3L; (i * i) <= number; i += 2) { // NOTICE the number of iterations will be significantly reduced.
+		iterations++;	
+		if(number % i == 0) {
+			System.out.println("Iterations = "+iterations);
+			return false;
+		}
+	}
+	System.out.println("Iterations = "+iterations);
+	return true; 
+}
+
+--  Time required to calculate first 10.131906 Million Prime numbers was a LITTLE LESS THAN 2:03:16.30(2hours-3mins-16seconds-30milliseconds).
+	Hence, consider 2:03:16.30 as an approximate time required to calculate first 10.131906 Million prime numbers.
+	Performing such a large oepration using the traditional approach is very inconvenient.
+
+--  Time required to calculate Prime numbers between 1 to 1 Million = 22.75 seconds.
+	(This is significantly better than the previous approaches which estimated to 193.64 and 97.94 seconds resp.)
+	
+--  Time required to check if the number '1000000005721' is prime or not: 0.43 seconds. (It is a prime number)
+	Looping iterations required to check if the number '1000000005721' is prime or not = 499999.
+	
+	NOTE: 
+	If normal approach is used for checking if the number '1000000005721' is prime or not, 
+	the amount of time required and iterations performed would be significantly larger;
+
+	Consider the normal approach of doing 'number/2' iterations:
+	our number = 1000000005721; so number/2 = 1000000005721/2 = 500000002861 iterations which is possible; 
+	HOWEVER, very impractical and inconvenient due to the time required for such a calculation, because:
+		We know, Approximate time required for performing 499999 iterations = 0.43 seconds;
+		therefore, time required for performing 1 million iterations = 0.43 * 2 = 0.86 seconds; approximate it to 1 second.
+		so, lets say, Approximate time required for performing 1 million iterations = 1 second.
+		
+		now, we need to perform 500000002861 iterations.
+		Therefore, time required for performing 500000002861 iterations = (500000002861 / iterations performed in 1 second)
+																		= (500000002861 / 1 million iterations)
+																		= 500000.002861 seconds.
+																		= 500000 seconds. (considering Approximate value)
+
+		NOW, 500000 seconds = 5.7870370 Days = 138.88 Hours.
+		SPENDING 138.88 Hours/ 5.7870370 Days IS VERY IMPRACTICAL AND INEFFICIENT! 
+
+	Even with the approach of performing 'number/4' iterations:
+		1000000005721/4 = 250000001430 iterations;
+		250000001430 / 1 million = 250000.00143 = 250000 seconds. (Considering Approximating value)
+		250000 seconds = 2.8935185 Days = 69.44 Hours.
+		AGAIN, WAITING FOR 2.8935185 Days or 69.44 Hours IS VERY INEFFICIENT APPROACH. 
+
+	HENCE, IT IS INFEASIBLE TO PERFORM SUCH AN OPERATION BY USING THESE INEFFICIENT METHODS.
+
+FACT: Total Prime numbers bet. 1 to 1 million = 78498.
