@@ -1,8 +1,14 @@
-/* Program to count vowels and consonants */
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 import java.io.IOException;
 
+/**
+ * Simple Program to count vowels and consonants
+ * Ex. input = LOL; output = Vowels: 1, Consonants: 2
+ * 
+ * @author insp7
+ */
 class VowelConsonant {
 
 	/**

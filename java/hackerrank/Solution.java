@@ -1,9 +1,14 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+
 import java.io.IOException;
 
-/** HACKER RANK QUESTION : https://www.hackerrank.com/challenges/electronics-shop/problem **/
+/**
+ * HACKER RANK QUESTION : https://www.hackerrank.com/challenges/electronics-shop/problem
+ *
+ * @author insp7
+ */
 public class Solution {
     private static final Scanner scanner = new Scanner(System.in);
 

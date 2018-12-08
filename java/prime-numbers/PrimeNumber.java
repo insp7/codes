@@ -3,7 +3,12 @@ import java.io.InputStreamReader;
 
 import java.io.IOException;
 
-/* To find prime numbers within a given range */
+/**
+ * Simple program to find prime numbers within a given range.
+ * Functions for checking primality of a number using traditional and trial Division approaches are written.
+ *
+ * @author insp7
+ */
 class PrimeNumber {
 
 	/**

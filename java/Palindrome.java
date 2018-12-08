@@ -1,7 +1,14 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
+import java.io.IOException;
+
+/**
+ * Program to check if a given string is a palindrome.
+ * Ex. 'radar' is a palindrome; 'hello' is not a palindrome.
+ * 
+ * @author insp7
+ */
 class Palindrome { 
 
 	/**

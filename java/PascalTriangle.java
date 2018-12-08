@@ -1,7 +1,13 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 import java.io.IOException;
 
+/**
+ * Program to print Pascal triangle for specified numRows.
+ *
+ * @author insp7
+ */
 class PascalTriangle {
 
 	/**

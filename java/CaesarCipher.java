@@ -1,7 +1,15 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 import java.io.IOException;
 
+/**
+ * The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet. 
+ * It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. 
+ * For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. 
+ * 
+ * @author insp7
+ */
 class CaesarCipher {
 
 	/**

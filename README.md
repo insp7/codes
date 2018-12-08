@@ -6,5 +6,8 @@
 * **java/VowelConsonant.java** : Code implementation for counting Vowels and consonants in a given sentence.
 * **java/Palindrome.java** : Program to check if a given string is a palindrome.
 * **java/PascalTriangle.java** : Program to display Pascal Triangle specified by the number of rows.
-* **java/PrimeNumber.java** : Program to print the series of prime numbers.
 * *Added solution to a hackerrank problem. To view the question, click* [hackerrank-question-electronics-shop](https://www.hackerrank.com/challenges/electronics-shop/problem)
+
+### 8-12-18
+* **java/RSA.java** : Implementation of RSA Algorithm.
+* **java/PrimeNumber/** : Updated PrimeNumbers.java; Added Test results for prime-checker functions.

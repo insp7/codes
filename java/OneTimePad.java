@@ -1,13 +1,21 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.IOException;
 import java.util.Random;
 
+import java.io.IOException;
+
+/**
+ * Progam implementation of Vernam cipher aka OneTimePad
+ * In cryptography, the one-time pad (OTP) is an encryption technique that cannot be cracked, 
+ * but requires the use of a one-time pre-shared key the same size as, or longer than, the message being sent.
+ *
+ * @author insp7
+ */
 class OneTimePad {
 	private static int[] randomShift; // Array to store the random-shift values of each character. 
 
 	/**
-	 * Function to Encrypt the plain-text using Vernam Cipher(aka One-time pad).
+	 * Function to Encrypt the plain-text using One-time pad.
 	 * 
 	 * @param {String} plainTxt Specifies the plain-text 
 	 * @return {String} returns encrypted text.
@@ -35,7 +43,7 @@ class OneTimePad {
 	}
 
 	/**
-	 * Function to Decrypt the cipher-text using Vernam Cipher(aka One-time pad).
+	 * Function to Decrypt the cipher-text using One-time pad.
 	 * 
 	 * @param {String} cipherTxt Specifies the cipher-text
 	 * @param {int[]} randomShift Specifies the array consisting of random Shifts for each character in the cipher-text
@@ -59,7 +67,10 @@ class OneTimePad {
 		return new String(shiftedChars);
 	} 
 	
-	// Function to print the randomShift values for all the characters.
+	
+	/**
+	 * Function to print the randomShift values for all the characters.
+	 */
 	private static void printRandomShiftKeys() {
 		System.out.println("Random Key Shifts : ");
 		for(int i=0; i<randomShift.length; i++){
