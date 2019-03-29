@@ -14,3 +14,4 @@
 
 ### 29-3-19
 * **php/query-builder(oop-php)** : MySQL Query builder for object oriented php. 
+* **c/BracketParser.c** : Bracket Parser using Stack in C. 
