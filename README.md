@@ -11,3 +11,6 @@
 ### 8-12-18
 * **java/RSA.java** : Implementation of RSA Algorithm.
 * **java/PrimeNumber/** : Updated PrimeNumbers.java; Added Test results for prime-checker functions.
+
+### 29-3-19
+* ** php/query-builder(oop-php)** : MySQL Query builder for object oriented php. 
