@@ -25,3 +25,6 @@
 * **data-structures/doubly-linked-list-without-last-ptr.c** : Doubly linked list with basic operations in C without using 'last' pointer.  
 * **data-structures/queue.c** : Simple Queue Implementation using Linked List.
 * **data-structures/stack.c** : Simple Stack Implementation using Array.
+
+### Python 
+* **python/ExchangeDigitsCP.py** : Competitive programming problem(Question included in the file).
