@@ -10,8 +10,8 @@
 * **java/PrimeNumber/** : Updated PrimeNumbers.java; Added Test results for prime-checker functions.
 * *Added solution to a hackerrank problem. To view the question, click* [hackerrank-question-electronics-shop](https://www.hackerrank.com/challenges/electronics-shop/problem)
 
-### Php
-* **php/query-builder(oop-php)** : MySQL Query builder for object oriented php. 
+### Basic Query Builder
+* **basic-query-builder(oop-php)** : Implemented Basic MySQL Query builder for object oriented php. 
 
 ### C
 * **c/BracketParser.c** : Bracket Parser using Stack in C. 
