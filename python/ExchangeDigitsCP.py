@@ -53,11 +53,11 @@ def getFrequencyOfDigits(number):
 	number = convertDigitsOfIntegerToList(number)
 
 	frequency = {}
-	for key in number:
-		if key in frequency:
-			frequency[key] = frequency[key] + 1
+	for digit in number:
+		if digit in frequency:
+			frequency[digit] = frequency[digit] + 1
 		else:
-			frequency[key] = 1
+			frequency[digit] = 1
 
 	return frequency 
 
