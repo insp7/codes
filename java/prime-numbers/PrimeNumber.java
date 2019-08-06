@@ -56,8 +56,9 @@ class PrimeNumber {
 		if(lowerbound == 1) {
 			lowerbound++; // since 1 is neither prime nor composite.
 			System.out.println(lowerbound++); // print the smallest prime number i.e. 2 and then increment it 
-		} else if(lowerbound % 2 == 0) 
+		} else if(lowerbound % 2 == 0) {
 			System.out.println(lowerbound++);
+		}
 
 		for(long i = lowerbound; i <= upperbound; i += 2) {
 			if(isPrimeUsingTrialDivision(i))
