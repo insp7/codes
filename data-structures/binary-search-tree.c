@@ -247,7 +247,7 @@ void  search(int  k) {
 
 	/* Searching the required node */
 	current = root;
-	while(current != NULL && current->data == k) {
+	while(current != NULL && current->data != k) {
 		
 		if(k < current->data)
 			current=current->left;
