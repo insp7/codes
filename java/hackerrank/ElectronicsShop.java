@@ -7,9 +7,9 @@ import java.io.IOException;
 /**
  * HACKER RANK QUESTION : https://www.hackerrank.com/challenges/electronics-shop/problem
  *
- * @author insp7
+ * @author AniketKonkar
  */
-public class Solution {
+public class ElectronicsShop {
     private static final Scanner scanner = new Scanner(System.in);
 
     /**

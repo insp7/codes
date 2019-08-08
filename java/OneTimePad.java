@@ -9,7 +9,7 @@ import java.io.IOException;
  * In cryptography, the one-time pad (OTP) is an encryption technique that cannot be cracked, 
  * but requires the use of a one-time pre-shared key the same size as, or longer than, the message being sent.
  *
- * @author insp7
+ * @author AniketKonkar
  */
 class OneTimePad {
 	private static int[] randomShift; // Array to store the random-shift values of each character. 

@@ -13,7 +13,7 @@ import java.io.IOException;
  * The process of Key distribution is also very important. 
  * For now, assuming that the keys will be distributed reliable and safe routes.
  *
- * @author insp7
+ * @author AniketKonkar
  */
 class RSA {
 

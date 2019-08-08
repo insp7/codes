@@ -7,7 +7,7 @@ import java.io.IOException;
  * Program to check if a given string is a palindrome.
  * Ex. 'radar' is a palindrome; 'hello' is not a palindrome.
  * 
- * @author insp7
+ * @author AniketKonkar
  */
 class Palindrome { 
 

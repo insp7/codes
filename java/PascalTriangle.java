@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  * Program to print Pascal triangle for specified numRows.
  *
- * @author insp7
+ * @author AniketKonkar
  */
 class PascalTriangle {
 

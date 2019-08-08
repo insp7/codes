@@ -7,7 +7,7 @@ import java.io.IOException;
  * Simple Program to count vowels and consonants
  * Ex. input = LOL; output = Vowels: 1, Consonants: 2
  * 
- * @author insp7
+ * @author AniketKonkar
  */
 class VowelConsonant {
 
@@ -51,8 +51,8 @@ class VowelConsonant {
 				consonants++;
 		}
 
-		System.out.println("Vowels = "+vowels);
-		System.out.println("Consonants = "+consonants);
+		System.out.println("Vowels = " + vowels);
+		System.out.println("Consonants = " + consonants);
 	}
 }
 

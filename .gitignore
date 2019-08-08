@@ -1,2 +1,8 @@
-#java binaries
+# java binaries
 /bin
+
+# List of first 10.13 billion prime numbers
+/java/prime-numbers/First 10.13 million prime numbers.txt
+
+# java basic boilerplate code
+/java/Template.java

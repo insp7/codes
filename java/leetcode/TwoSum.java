@@ -1,8 +1,10 @@
-// Question: https://leetcode.com/problems/two-sum/
-
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * Question: https://leetcode.com/problems/two-sum/
+ * @author AniketKonkar
+ */
 class TwoSum {
 
 	/**

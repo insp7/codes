@@ -6,8 +6,7 @@ OS: Windows 7 Ultimate 64-bit
 
 TESTS: 
 
-The input numbers given to prime-checker function were all odd numbers starting from 3(i.e. 3, 5, 7, 9, 11, ... ,181935769); 
-Because all even numbers are composite, hence avoid that computation. 
+The input numbers given to prime-checker function were all odd numbers starting from 3(i.e. 3, 5, 7, 9, 11, ... ,181935769); Because all even numbers are composite, hence avoid that computation. 
 
 1) Using traditional approach: 
 CODE SNIPPET OF SIMPLE PRIME-CHECKER FUNCTION: 
@@ -108,7 +107,5 @@ private static boolean isPrimeUsingTrialDivision(long number) {
 		250000001430 / 1 million = 250000.00143 = 250000 seconds. (Considering Approximating value)
 		250000 seconds = 2.8935185 Days = 69.44 Hours.
 		AGAIN, WAITING FOR 2.8935185 Days or 69.44 Hours IS VERY INEFFICIENT APPROACH. 
-
-	HENCE, IT IS INFEASIBLE TO PERFORM SUCH AN OPERATION BY USING THESE INEFFICIENT METHODS.
 
 FACT: Total Prime numbers bet. 1 to 1 million = 78498.
