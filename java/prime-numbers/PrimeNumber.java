@@ -14,34 +14,53 @@ class PrimeNumber {
 	/**
 	 * Function to check if the given number is prime.
 	 * 
-	 * @param  number Specifies the passed number
-	 * @return        returns true if the given number is prime, else returns false.
+	 * @param  n Specifies the passed number
+	 * @return        true if the given number is prime, else false.
 	 */
-	private static boolean isPrime(long number) {
-		if(number == 2) return true; // Smallest prime number.
-		if(number % 2 == 0) return false; // check if its an even number; if true, return false; since all even numbers are composite.
+	private static boolean isPrime(long n) {
+		if(n == 2) return true; // Smallest prime number.
+		if(n % 2 == 0) return false; // check if its an even number; if true, return false; since all even numbers are composite.
 
-		for(long i = 3L; i <= number/2; i += 2) {
-			if(number % i == 0) return false;
+		for(long i = 3L; i <= n/2; i += 2) {
+			if(n % i == 0) return false;
 		}
 		return true; 
 	}
 
 	/**
 	 * Function to check if the given number is prime using Trial Division algorithm;
-	 * If any prime number whose square does not exceed 'number' divides it without a remainder, then 'number' is not prime.
+	 * If any prime number whose square does not exceed 'n' divides it without a remainder, then 'n' is not prime.
 	 * 
-	 * @param  number Specifies the passed number
-	 * @return        returns true if the given number is prime, else returns false.
+	 * @param  n Specifies the passed number
+	 * @return        true if the given number is prime, else false.
 	 */
-	private static boolean isPrimeUsingTrialDivision(long number) {
-		if(number == 2) return true; // Smallest prime number.
-		if(number % 2 == 0) return false; // check if its an even number; if true, return false; since all even numbers are composite.
+	private static boolean isPrimeUsingTrialDivision(long n) {
+		if(n == 2) return true; // Smallest prime number.
+		if(n % 2 == 0) return false; // check if its an even number; if true, return false; since all even numbers are composite.
 
-		for(long i = 3L; (i * i) <= number; i += 2) {
-			if(number % i == 0) return false;
+		for(long i = 3L; (i * i) <= n; i += 2) {
+			if(n % i == 0) return false;
 		}
 		return true; 
+	}
+
+	/**
+	 * Optimized approach for trial division.
+	 * @param  n Specifies the passed number
+	 * @return   true if the given number is prime, else false.
+	 */
+	public static boolean isPrimeUsingOptimizedTrialDivision(long n) {
+	     if(n ≤ 3)
+	        return n > 1;
+	     else if(n % 2 == 0 or n % 3 == 0)
+	        return false;
+
+	     long i = 5;
+	     while(i * i ≤ n)
+	        if(n % i == 0 || n % (i + 2) == 0)
+	            return false;
+	        i = i + 6;
+	     return true;
 	}
 
 	public static void main(String[] args) throws IOException, Exception {
@@ -51,7 +70,7 @@ class PrimeNumber {
 		long lowerbound = Long.parseLong(br.readLine());
 		long upperbound = Long.parseLong(br.readLine());
 
-		System.out.println("The prime numbers between "+lowerbound+" & "+upperbound+" are :");
+		System.out.println("The prime numbers between " + lowerbound + " & " + upperbound + " are :");
 
 		if(lowerbound == 1) {
 			lowerbound++; // since 1 is neither prime nor composite.

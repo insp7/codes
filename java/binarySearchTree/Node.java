@@ -1,17 +1,17 @@
 package binarySearchTree;
 
-class Node {
+public class Node {
 	int data;
 	Node leftChild, rightChild;
 	
-	Node(int data) {
+	public Node(int data) {
 		this.data = data;
 		leftChild = rightChild = null;
 	}
 	
 	/**
-	 * [toString description]
-	 * @return [description]
+	 * Method that returns a string representing this node's data.
+	 * @return String format of this node object.
 	 */
 	public String toString() {
 		return "The data value for this node is " + data;

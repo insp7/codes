@@ -6,3 +6,7 @@
 
 # java basic boilerplate code
 /java/Template.java
+
+# C/C++ object files
+/c/*.out
+/c++/*.out

@@ -1,15 +1,29 @@
 package binarySearchTree;
 
-class BinarySearchTree {
-	Node root;
-	int leafCount, nodeCount;
+/**
+ * A class for performing all basic operations on a Binary Search Tree.
+ */
+public class BinarySearchTree {
 
-	BinarySearchTree() {
+	public Node root;
+	public int leafCount, nodeCount;
+
+	// Creates an emoty binary search tree with root set to null.
+	public BinarySearchTree() {
 		root = null;
-		leafCount = 0;
-		nodeCount = 0;
+		leafCount = nodeCount = 1;
 	}
 
+	// Creates a binary search tree with a root node.
+	public BinarySearchTree(int data) {
+		root = new Node(data);
+		leafCount = nodeCount = 1;
+	}
+
+	/**
+	 * Method to insert a node in the binary search tree.
+	 * @param data Specifies the integer data to be inserted.
+	 */
 	public void addNode(int data) {
 		Node current = root, follow = null;
 		Node newNode = new Node(data);
@@ -29,7 +43,7 @@ class BinarySearchTree {
 		}
 		
 		// Actual insertion
-		if(current.data <= data)
+		if(data <= follow.data)
 			follow.leftChild = newNode;
 		else
 			follow.rightChild = newNode;
@@ -98,26 +112,29 @@ class BinarySearchTree {
 		}
 	}
 
+	// Recursive method to traverse and print elements in preorder.
 	public void preOrder(Node root) {
 		if(root != null) {
 			System.out.println(root.data + " ");
-			preOrder(root.left);
-			preOrder(root.right);
+			preOrder(root.leftChild);
+			preOrder(root.rightChild);
 		}
 	}
 
+	// Recursive method to traverse and print elements in inorder.
 	public void inOrder(Node root) {
 		if(root != null) {
-			inOrder(root.left);
-			System.out.println(root.data + " ");
-			inOrder(root.right);
+			inOrder(root.leftChild);
+			System.out.print(root.data + " ");
+			inOrder(root.rightChild);
 		}
 	}
 
+	// Recursive method to traverse and print elements in postorder.
 	public void postOrder(Node root) {
 		if(root != null) {
-			postOrder(root.left);
-			postorder(root.right);
+			postOrder(root.leftChild);
+			postOrder(root.rightChild);
 			System.out.println(root.data + " ");
 		}
 	}
@@ -138,20 +155,36 @@ class BinarySearchTree {
 			return current;
 	}
 
-	public int countLeafs(Node root) {
+	/*
+	public int leafCount(Node root) {
 		if(root != null) {
-			countLeafst(root->left);
-			if(root->left == NULL && root->right == NULL) leafCount++;
-			countLeafs(root->right);
+			leafCount(root.leftChild);
+			if(root.leftChild == null && root.rightChild == null) leafCount++;
+			leafCount(root.rightChild);
 		}
 	}	
 
-	public void countNodes(Node root) {
+	public void getNodeCount(Node root) {
 		if(root != null) {
-			countNodes(root.left);
+			getNodeCount(root.leftChild);
 			this.nodeCount++;
-			countNodes(root.right);
+			getNodeCount(root.rightChild);
 		}
+	} */
+
+	public int getMinValue(Node root) {
+		Node current = root;
+
+		while(current.leftChild != null) 
+			current = current.leftChild;
+		return current.data;
 	}
 
+	public int getMaxValue(Node root) {
+		Node current = root;
+
+		while(current.rightChild != null) 
+			current = current.rightChild;
+		return current.data;
+	}
 }
