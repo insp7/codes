@@ -4,7 +4,11 @@ package codility;
 QUESTION:
 A magic square of size K is a K x K square grid filled with integers
 such that the sum of the integers in each row, column and diagonal of the grid is equal.
+Note that integers in the magic square do not have to be distinct.
+Also note that every square of size 1 is magic.
 
+Given a matrix consisting of N rows and M columns,
+return the size of the largest magic square that can be found within this matrix.
  */
 
 public class MagicSquare {

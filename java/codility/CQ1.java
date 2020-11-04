@@ -1,5 +1,12 @@
 package codility;
 
+/*
+QUESTION:
+Given 4 digits, count how many valid times can be displayed on a digital clock(in 24-hour format) using those digits.
+The earliest time is 00:00 and the latest time is 23:59.
+ */
+
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
