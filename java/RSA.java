@@ -52,7 +52,7 @@ class RSA {
 			return factorsFinal;
 		}
 
-		int factors[] = new int[number]; 
+		int[] factors = new int[number];
         int j = 0, size = 0;
 
         for (int i = 1; (i * i) <= number; i++) { 
