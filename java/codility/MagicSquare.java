@@ -28,7 +28,7 @@ public class MagicSquare {
         int size = x2 - x1 + 1; // get size of the current sub matrix (y2-y1+1 or x2-x1+1)
         int diagonalSum = a[x1][y1];
         int secondDiagonalSum = a[x1][y2];
-        int magicSquareSize = -1;
+        int magicSquareSize = 1;
 
         for (int index = 0, row = x1, column = y1, end = y2 - 1; index < size; row++, column++, end--, index++) {
             if (row != x2) { // to prevent out of bounds indexing
@@ -60,35 +60,23 @@ public class MagicSquare {
                 if(diagonalSum != colSum[size-1][yIndex]) return -1;
             }
 
-            System.out.println("(x1,y1) => (" + x1 + "," + y1 + ") (x2,y2) => (" + x2 + "," + y2 + ")"); // print the coordinates of this magic square matrix
+            // PRINT THE CO-ORDINATES OF THIS MATRIX
+            System.out.println("(x1,y1) => (" + x1 + "," + y1 + ") (x2,y2) => (" + x2 + "," + y2 + ")");
             magicSquareSize = size;
         }
         return magicSquareSize;
     }
 
-    public static void main(String[] args) {
-        int[][] a = new int[][] {
-                {16, 16, 16, 16, 16},
-                {1, 23, 16, 4, 21},
-                {15, 14, 7, 18, 11},
-                {24, 17, 13, 9, 2},
-                {20, 8, 19, 12, 6},
-                {5, 3, 10, 22, 25},
-                {7, 7, 7, 7, 7}
-        };
-        /*
-            From the above input, the following matrix is a magic square:
-            {1, 23, 16, 4, 21},
-            {15, 14, 7, 18, 11},
-            {24, 17, 13, 9, 2},
-            {20, 8, 19, 12, 6},
-            {5, 3, 10, 22, 25}
-            Coordinates of this magic square [(x1, y1) to (x2, y2)]: start => (1, 0) end => (5, 4)
-         */
+    public static int solution(int[][] a) {
+        if(a == null || a.length == 0)
+            return 0;
 
-        int maxMagicSquareSize = -1;
+        int maxMagicSquareSize = 1;
         int rowSize = a.length;
         int colSize = a[0].length;
+
+        if(rowSize == 1 || colSize == 1) // coz every square of size one is considered magic
+            return maxMagicSquareSize;
 
         for(int row = 0; row < rowSize - 1; row++) {
             for(int col = 0; col < colSize; col++) {
@@ -101,6 +89,66 @@ public class MagicSquare {
                 }
             }
         }
+        return maxMagicSquareSize;
+    }
+
+    public static void main(String[] args) {
+        int[][] a = new int[][] {
+                {16, 16, 16, 16, 16},
+                {1, 23, 16, 4, 21},
+                {15, 14, 7, 18, 11},
+                {24, 17, 13, 9, 2},
+                {20, 8, 19, 12, 6},
+                {5, 3, 10, 22, 25},
+                {7, 7, 7, 7, 7}
+        };
+
+        int maxMagicSquareSize = solution(a);
         System.out.println(maxMagicSquareSize);
+
+        /*
+            From the above input, the following matrix is a magic square:
+            {1, 23, 16, 4, 21},
+            {15, 14, 7, 18, 11},
+            {24, 17, 13, 9, 2},
+            {20, 8, 19, 12, 6},
+            {5, 3, 10, 22, 25}
+            Coordinates of this magic square [(x1, y1) to (x2, y2)]: start => (1, 0) end => (5, 4)
+
+            Below are some sample N x M input matrices
+            int[][] b = new int[][] {
+                    {7, 2, 4},
+                    {2, 7, 6},
+                    {9, 5, 1},
+                    {4, 3, 8},
+                    {3, 5, 4}
+            };
+
+            int[][] c = new int[][] {
+                    {4, 3, 4, 5, 3},
+                    {2, 7, 3, 8, 4},
+                    {1, 7, 6, 5, 2},
+                    {8, 4, 9, 5, 5}
+            };
+
+            int[][] d = new int[][] {
+                    {2, 2, 1, 1},
+                    {2, 2, 2, 2},
+                    {1, 2, 2, 2}
+            };
+
+            int[][] e = new int[][] {
+                    {7, 2, 4}
+            };
+
+            int[][] f = new int[][] {
+                    {7},
+                    {2},
+                    {4}
+            };
+
+            int[][] emptyArray = new int[][]{};
+            int[][] nullArray = null;
+         */
     }
 }
