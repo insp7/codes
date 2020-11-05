@@ -16,13 +16,13 @@ More about magic square: https://en.wikipedia.org/wiki/Magic_square
 public class MagicSquare {
 
     /**
-     *
+     * Function to check whether the given sub matrix is a magic square or not.
      * @param a Represents the input matrix.
      * @param x1 This co-ordinate represents the row from which the square starts.
      * @param y1 This co-ordinate represents the column from which the square starts.
      * @param x2 This co-ordinate represents the row at which the square ends.
      * @param y2 This co-ordinate represents the column at which the square ends.
-     * @return Size of this sub matrix if it is a magic square, else  -1.
+     * @return Size of this sub matrix if it is a magic square, else 1, since every square of size 1 is magic.
      */
     public static int isMagicSquare(int[][] a, int x1, int y1, int x2, int y2) {
         int size = x2 - x1 + 1; // get size of the current sub matrix (y2-y1+1 or x2-x1+1)
