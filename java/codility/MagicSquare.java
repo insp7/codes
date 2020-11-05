@@ -9,6 +9,8 @@ Also note that every square of size 1 is magic.
 
 Given a matrix consisting of N rows and M columns,
 return the size of the largest magic square that can be found within this matrix.
+
+More about magic square: https://en.wikipedia.org/wiki/Magic_square
  */
 
 public class MagicSquare {
@@ -102,13 +104,3 @@ public class MagicSquare {
         System.out.println(maxMagicSquareSize);
     }
 }
-
-
-
-
-
-
-
-
-
-
